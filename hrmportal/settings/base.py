@@ -62,6 +62,7 @@ THIRD_PARTY_APPS = [
     "cities_light",
     "widget_tweaks",
     "django_cleanup.apps.CleanupConfig",
+    "phonenumber_field",
 ]
 
 

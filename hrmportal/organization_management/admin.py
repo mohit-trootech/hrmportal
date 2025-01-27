@@ -1,3 +1,12 @@
-from django.contrib import admin
+from django.contrib.admin import site
+from organization_management.models import (
+    Organization,
+    Technology,
+    Department,
+    Designation,
+)
 
-# Register your models here.
+site.register(Organization)
+site.register(Technology)
+site.register(Department)
+site.register(Designation)
