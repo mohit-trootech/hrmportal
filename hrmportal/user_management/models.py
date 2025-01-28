@@ -163,7 +163,9 @@ class UserOrganizationDetail(Model):
 
 
 class UserQualification(Model):
-    user = OneToOneField("user_management.User", on_delete=CASCADE)
+    user = ForeignKey(
+        "user_management.User", on_delete=CASCADE, related_name="qualifications"
+    )
     degree = CharField(max_length=255)
     college = CharField(max_length=255)
     university = CharField(max_length=255)
@@ -212,3 +214,27 @@ class User(AbstractUser):
 
     def __str__(self):
         return self.email
+
+
+class UserReporting(Model):
+
+    user = OneToOneField("user_management.User", on_delete=CASCADE)
+    reporting_managers = ForeignKey(
+        "user_management.User",
+        on_delete=CASCADE,
+        related_name="reporting_managers",
+    )
+    project_manager = ForeignKey(
+        "user_management.User",
+        on_delete=CASCADE,
+        related_name="project_manager",
+        blank=True,
+        null=True,
+    )
+
+    class Meta:
+        verbose_name = VerboseConstants.USER_REPORTING
+        verbose_name_plural = VerboseConstants.USER_REPORTING
+
+    def __str__(self):
+        return self.user.email

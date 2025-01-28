@@ -53,3 +53,4 @@ class VerboseConstants:
     BANK_DETAILS = _("Bank Details")
     USER_ORGANIZATION_DETAIL = _("User Organization Detail")
     USER_ORGANIZATION_DETAILS = _("User Organization Details")
+    USER_REPORTING = _("User Reporting")
