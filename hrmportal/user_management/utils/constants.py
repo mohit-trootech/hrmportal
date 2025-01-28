@@ -54,3 +54,7 @@ class VerboseConstants:
     USER_ORGANIZATION_DETAIL = _("User Organization Detail")
     USER_ORGANIZATION_DETAILS = _("User Organization Details")
     USER_REPORTING = _("User Reporting")
+
+
+class Templates:
+    USER_LIST = "user_management/users.html"

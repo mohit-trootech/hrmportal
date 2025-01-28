@@ -1,4 +1,4 @@
-from django.utils.translation import gettext_lazy as _
+from django.utils.translation import gettext_lazy as _  # noqa # TODO: Remove this Later
 
 
 class Settings:
@@ -13,9 +13,9 @@ class Settings:
     USE_I18N = True
     USE_TZ = True
     STATIC_URL = "/static/"
-    STATIC_FILES_DIRS = "templates/static/"
-    STATIC_ROOT = "static/"
-    MEDIA_URL = "/media/"
+    STATIC_FILES_DIRS = "static/"
+    STATIC_ROOT = "assets/"
+    MEDIA_URL = "media/"
     MEDIA_ROOT = "media/"
 
 

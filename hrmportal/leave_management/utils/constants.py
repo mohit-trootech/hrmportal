@@ -6,7 +6,7 @@ class VerboseConstants:
     LEAVES = _("Leaves")
 
 
-class LeaveStatus:
+class LeaveStatusConstants:
     PENDING = "pending"
     REJECTED = "rejected"
     APPROVED = "approved"
